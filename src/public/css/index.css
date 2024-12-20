@@ -1,0 +1,199 @@
+/* Establecer el estilo global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Fondo de la página */
+body {
+  background-color: #121212; /* Fondo oscuro */
+  color: #EAEAEA;
+  font-size: 16px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Encabezado de la página */
+header {
+  width: 100%;
+  padding: 20px 0;
+  background-color: #1E1E1E;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #1DB954; /* Verde Spotify */
+  font-weight: 500;
+  font-size: 18px;
+  padding: 12px 20px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #1C1C1C;
+  color: #1ED760; /* Verde más brillante */
+  transform: scale(1.1);
+}
+
+/* Sección de bienvenida */
+.welcome-section {
+  margin-top: 80px;
+  text-align: center;
+  padding: 60px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.welcome-container {
+  max-width: 900px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background-image: url('https://asesoriaeninformatica.com/wp-content/uploads/2019/02/teclado-blanco-y-negro.jpg'); 
+  background-size: cover;
+  background-position: center;
+}
+
+.welcome-container h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #1DB954; /* Verde Spotify */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+}
+
+.welcome-container p {
+  font-size: 1.2rem;
+  color: #B0B0B0;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* Efectos sutiles */
+a {
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  transform: translateY(-5px);
+}
+
+/* Sección de imágenes tipo cascada */
+.cascade-images {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.cascade-images img {
+  width: 30%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.cascade-images img:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .welcome-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .welcome-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .cascade-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cascade-images img {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #1E1E1E;
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+  color: #B0B0B0;
+}
+
+footer a {
+  text-decoration: none;
+  color: #1DB954;
+}
+
+footer a:hover {
+  color: #1ED760;
+}
+
+/* Estilo de las tarjetas o bloques de contenido */
+.card {
+  background-color: #1A1A1A;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.card h2 {
+  color: #1DB954;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #B0B0B0;
+  line-height: 1.6;
+}

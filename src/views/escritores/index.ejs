@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escritores</title>
+  <link rel="stylesheet" href="./css/escritores/lista.css">
+</head>
+<body>
+  <div class="writers-list-container">
+    <h2>Lista de Escritores</h2>
+
+    <a href="/escritores/crear">Crear Nuevo Escritor</a>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Alias</th>
+          <th>Fecha de Nacimiento</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% escritores.forEach(escritor => { %>
+          <tr>
+            <td><%= escritor.nombre %></td>
+            <td><%= escritor.alias %></td>
+            <td><%= escritor.fechaNacimiento %></td>
+            <td>
+              <a href="/escritores/editar/<%= escritor.id %>">Editar</a>
+              <a href="/escritores/delete/<%= escritor.id %>">Eliminar</a>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

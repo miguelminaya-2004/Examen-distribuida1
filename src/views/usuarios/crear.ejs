@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Usuario</title>
+  <link rel="stylesheet" href="/css/usuarios/crear.css">
+</head>
+<body>
+  <div class="create-user-container">
+    <h2>Crear Usuario</h2>
+    <form action="/usuarios/crear" method="POST">
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required>
+      </div>
+      <div>
+        <label for="usuario">Usuario:</label>
+        <input type="text" name="usuario" id="usuario" required>
+      </div>
+      <div>
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" name="contraseña" id="contraseña" required>
+      </div>
+      <button type="submit">Crear Usuario</button>
+    </form>
+  </div>
+</body>
+</html>

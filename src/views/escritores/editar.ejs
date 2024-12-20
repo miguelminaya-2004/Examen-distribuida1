@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Escritor</title>
+  <link rel="stylesheet" href="/css/escritores/editar.css">
+</head>
+<body>
+  <div class="edit-writer-container">
+    <h2>Editar Escritor</h2>
+    <form action="/escritores/editar" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="id" value="<%= escritor.id %>">
+
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" value="<%= escritor.nombre %>" required>
+      </div>
+      <div>
+        <label for="alias">Alias:</label>
+        <input type="text" name="alias" id="alias" value="<%= escritor.alias %>">
+      </div>
+      <div>
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" name="fechaNacimiento" id="fechaNacimiento" value="<%= escritor.fechaNacimiento %>" required>
+      </div>
+      <div>
+        <label for="imagen">Imagen:</label>
+        <input type="file" name="imagen" id="imagen">
+      </div>
+      <div>
+        <label for="biografia">Biografía:</label>
+        <textarea name="biografia" id="biografia" required><%= escritor.biografia %></textarea>
+      </div>
+      <button type="submit">Actualizar Escritor</button>
+    </form>
+  </div>
+</body>
+</html>

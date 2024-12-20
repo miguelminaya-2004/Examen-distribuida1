@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Usuarios</title>
+    <link rel="stylesheet" href="/path/to/your/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Panel de Usuarios</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Lista de Usuarios</h2>
+            <ul>
+                <% usuarios.forEach(function(usuario) { %>
+                    <li><%= usuario.nombre %> - <%= usuario.email %></li>
+                <% }); %>
+            </ul>
+        </section>
+        <section>
+            <h2>Agregar Nuevo Usuario</h2>
+            <form action="/usuarios/agregar" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Agregar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Panel de Usuarios</p>
+    </footer>
+</body>
+</html>

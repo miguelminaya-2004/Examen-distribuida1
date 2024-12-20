@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Usuario</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="edit-user-container">
+    <h2>Editar Usuario</h2>
+    <form action="/usuarios/editar" method="POST">
+      <input type="hidden" name="id" value="<%= user.id %>">
+
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" value="<%= user.nombre %>" required>
+      </div>
+      <div>
+        <label for="usuario">Usuario:</label>
+        <input type="text" name="usuario" id="usuario" value="<%= user.usuario %>" required>
+      </div>
+      <div>
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" name="contraseña" id="contraseña" required>
+      </div>
+      <button type="submit">Actualizar Usuario</button>
+    </form>
+  </div>
+</body>
+</html>

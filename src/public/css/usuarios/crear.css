@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #121212, #1E1E1E);
+    color: #EAEAEA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .create-user-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .create-user-container h2 {
+    font-size: 2.5rem;
+    color: #1DB954;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .create-user-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .create-user-container form div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .create-user-container form label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #1DB954;
+  }
+  
+  .create-user-container form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #EAEAEA;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .create-user-container form input:focus {
+    border-color: #1DB954;
+    box-shadow: 0 0 10px rgba(29, 185, 84, 0.5);
+  }
+  
+  .create-user-container form button {
+    padding: 10px;
+    background-color: #1DB954;
+    color: #121212;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 8px;
+    border: none;
+  }
+  
+  .create-user-container form button:hover {
+    background-color: #1ED760;
+    transform: translateY(-3px);
+  }
+  
+  @media (max-width: 768px) {
+    .create-user-container {
+      width: 90%;
+    }
+  
+    .create-user-container h2 {
+      font-size: 2rem;
+    }
+  }
+  

@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #121212, #1E1E1E);
+    color: #EAEAEA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .delete-writer-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .delete-writer-container h2 {
+    font-size: 2.5rem;
+    color: #FF4D4D;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .delete-writer-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .delete-writer-container form p {
+    font-size: 1.2rem;
+    color: #EAEAEA;
+  }
+  
+  .delete-writer-container form button,
+  .delete-writer-container form a {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #EAEAEA;
+    font-size: 1rem;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .delete-writer-container form button {
+    background-color: #FF4D4D;
+    font-weight: bold;
+  }
+  
+  .delete-writer-container form button:hover {
+    background-color: #FF1A1A;
+  }
+  
+  .delete-writer-container form a {
+    text-decoration: none;
+    background-color: #1DB954;
+  }
+  
+  .delete-writer-container form a:hover {
+    background-color: #1ED760;
+  }
+  
+  @media (max-width: 768px) {
+    .delete-writer-container {
+      width: 90%;
+    }
+  
+    .delete-writer-container h2 {
+      font-size: 2rem;
+    }
+  }
+  

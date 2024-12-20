@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eliminar Escritor</title>
+  <link rel="stylesheet" href="/css/escritores/eliminar.css">
+</head>
+<body>
+  <div class="delete-writer-container">
+    <h2>¿Estás seguro de eliminar este escritor?</h2>
+    <form action="/escritores/delete/<%= escritor.id %>" method="POST">
+      <p>Nombre: <%= escritor.nombre %></p>
+      <button type="submit">Sí, Eliminar</button>
+      <a href="/escritores">Cancelar</a>
+    </form>
+  </div>
+</body>
+</html>

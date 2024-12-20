@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle de Escritor</title>
+  <link rel="stylesheet" href="/css/escritores/detalle.css">
+</head>
+<body>
+  <div class="writer-detail-container">
+    <h2><%= escritor.nombre %></h2>
+    <p><strong>Alias:</strong> <%= escritor.alias %></p>
+    <p><strong>Fecha de Nacimiento:</strong> <%= escritor.fechaNacimiento %></p>
+
+    <% if (escritor.imagen) { %>
+      <img src="/uploads/<%= escritor.imagen %>" alt="<%= escritor.nombre %>">
+    <% } %>
+
+    <h3>Biografía</h3>
+    <p><%= escritor.biografia %></p>
+
+    <a href="/escritores">Volver a la lista</a>
+  </div>
+</body>
+</html>

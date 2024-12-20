@@ -1,0 +1,141 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Fondo y cuerpo */
+  body {
+    background: linear-gradient(135deg, #121212, #1E1E1E); /* Fondo degradado oscuro */
+    color: #EAEAEA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Contenedor principal */
+  .writers-list-container {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 1000px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Animación de entrada */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Título */
+  .writers-list-container h2 {
+    font-size: 2.5rem;
+    color: #1DB954; /* Verde llamativo */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  /* Enlace para crear un nuevo escritor */
+  .writers-list-container a[href="/escritores/crear"] {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #1DB954;
+    color: #121212;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+  }
+  
+  .writers-list-container a[href="/escritores/crear"]:hover {
+    background-color: #1ED760; /* Más brillante */
+    transform: scale(1.1);
+  }
+  
+  /* Tabla de escritores */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Encabezados de tabla */
+  table thead tr {
+    background-color: #1E1E1E;
+    color: #1DB954;
+  }
+  
+  table th, table td {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  table th {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1rem;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.03); /* Fila par */
+  }
+  
+  table tr:hover {
+    background-color: rgba(29, 185, 84, 0.1); /* Hover de fila */
+  }
+  
+  table td {
+    color: #EAEAEA;
+    font-size: 1rem;
+  }
+  
+  /* Enlaces de acciones */
+  table td a {
+    text-decoration: none;
+    color: #1DB954;
+    font-weight: bold;
+    margin: 0 5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  table td a:hover {
+    color: #1ED760;
+    transform: translateY(-3px);
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    table, table th, table td {
+      font-size: 0.9rem;
+    }
+  
+    .writers-list-container h2 {
+      font-size: 2rem;
+    }
+  
+    .writers-list-container a[href="/escritores/crear"] {
+      font-size: 0.9rem;
+      padding: 8px 15px;
+    }
+  }
+  

@@ -1,0 +1,122 @@
+/* Estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Fondo y cuerpo */
+body {
+  background: linear-gradient(135deg, #121212, #1E1E1E);
+  color: #EAEAEA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Contenedor principal */
+.create-writer-container {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 80%;
+  max-width: 600px;
+  animation: fadeIn 1s ease-in-out;
+  position: relative;
+  text-align: center;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Título */
+.create-writer-container h2 {
+  font-size: 2.5rem;
+  color: #1DB954;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Estilo del formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+form label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #1DB954;
+}
+
+form input, form textarea, form button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #EAEAEA;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Hover y foco */
+form input:focus, form textarea:focus, form button:hover {
+  border-color: #1DB954;
+  box-shadow: 0 0 10px rgba(29, 185, 84, 0.5);
+}
+
+/* Textarea */
+form textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* Botón */
+form button {
+  background-color: #1DB954;
+  color: #121212;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background-color: #1ED760;
+  transform: translateY(-3px);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .create-writer-container {
+    width: 90%;
+  }
+
+  .create-writer-container h2 {
+    font-size: 2rem;
+  }
+}
