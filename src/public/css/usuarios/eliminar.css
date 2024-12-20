@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #121212, #1E1E1E);
+    color: #EAEAEA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .delete-user-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .delete-user-container h2 {
+    font-size: 2.5rem;
+    color: #FF4C4C;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .delete-user-container p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  
+  .delete-user-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .delete-user-container form button {
+    padding: 12px;
+    background-color: #FF4C4C;
+    color: #121212;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 8px;
+    border: none;
+  }
+  
+  .delete-user-container form button:hover {
+    background-color: #FF0000;
+    transform: translateY(-3px);
+  }
+  
+  .delete-user-container form a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #1DB954;
+    transition: color 0.3s ease;
+  }
+  
+  .delete-user-container form a:hover {
+    color: #1ED760;
+  }
+  
+  @media (max-width: 768px) {
+    .delete-user-container {
+      width: 90%;
+    }
+  
+    .delete-user-container h2 {
+      font-size: 2rem;
+    }
+  }
+  

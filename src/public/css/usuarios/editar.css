@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #121212, #1E1E1E);
+    color: #EAEAEA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .edit-user-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .edit-user-container h2 {
+    font-size: 2.5rem;
+    color: #1DB954;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .edit-user-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .edit-user-container form div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .edit-user-container form label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #1DB954;
+  }
+  
+  .edit-user-container form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #EAEAEA;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .edit-user-container form input:focus {
+    border-color: #1DB954;
+    box-shadow: 0 0 10px rgba(29, 185, 84, 0.5);
+  }
+  
+  .edit-user-container form button {
+    padding: 12px;
+    background-color: #1DB954;
+    color: #121212;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 8px;
+    border: none;
+  }
+  
+  .edit-user-container form button:hover {
+    background-color: #1ED760;
+    transform: translateY(-3px);
+  }
+  
+  @media (max-width: 768px) {
+    .edit-user-container {
+      width: 90%;
+    }
+  
+    .edit-user-container h2 {
+      font-size: 2rem;
+    }
+  }
+  
